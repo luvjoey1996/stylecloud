@@ -49,6 +49,7 @@ def gen_fa_mask(
     icon_dir: str = ".temp",
     pro_icon_path: str = None,
     pro_css_path: str = None,
+    filename: str='icon.png'
 ):
     """
     Generates a Font Awesome icon mask from the given FA prefix + name.
@@ -76,7 +77,7 @@ def gen_fa_mask(
     icon.export_icon(
         icon=icon_name_raw[len(icon.common_prefix) :],
         size=size,
-        filename="icon.png",
+        filename=filename,
         export_dir=icon_dir,
     )
 
